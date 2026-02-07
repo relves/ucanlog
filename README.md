@@ -142,6 +142,7 @@ type RequestValidator interface {
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
 | `DATA_PATH` | Directory for log storage | `./data` | No |
+| `IPFS_GATEWAY_URL` | IPFS gateway used to proxy tlog-tiles data | `https://w3s.link` | No |
 | `LOG_LEVEL` | Minimum log level (`debug`, `info`, `warn`, `error`) | `info` | No |
 | `PORT` | HTTP server port | `8080` | No |
 | `UCANLOG_PRIVATE_KEY` | Base64-encoded Ed25519 private key | Generated | No |
@@ -245,6 +246,66 @@ curl http://localhost:8080/logs/did:key:z6Mk.../head
 - Check current head before append (optimistic concurrency)
 - Monitor log growth (tree size)
 - Verify checkpoint publication
+
+### tlog-tiles API
+
+UCANLOG exposes read-only tile endpoints compatible with the [tlog-tiles specification](https://github.com/C2SP/C2SP/blob/main/tlog-tiles.md). These endpoints proxy tile data from IPFS and do not require UCAN authentication.
+
+#### GET /logs/{logID}/checkpoint
+
+Returns the latest signed checkpoint for the log.
+
+**Returns:** `text/plain` — the checkpoint body
+
+**Cache:** `public, max-age=5` (short-lived for freshness)
+
+**Example:**
+```bash
+curl http://localhost:8080/logs/did:key:z6Mk.../checkpoint
+```
+
+#### GET /logs/{logID}/tile/{level}/{tilePath...}
+
+Returns a Merkle tree tile at the given level and index.
+
+**Parameters:**
+- `level`: Tile tree level (0–63)
+- `tilePath`: Tile index encoded as path segments, e.g. `x000/x001/234` or `x000/x001/234.p/128` for partial tiles
+
+**Returns:** `application/octet-stream` — raw tile bytes
+
+**Cache:** `public, max-age=31536000, immutable`
+
+**Example:**
+```bash
+# Full tile at level 0, index 0
+curl http://localhost:8080/logs/did:key:z6Mk.../tile/0/x000/000
+
+# Partial tile (128 entries wide)
+curl http://localhost:8080/logs/did:key:z6Mk.../tile/0/x000/001.p/128
+```
+
+#### GET /logs/{logID}/tile/entries/{entryPath...}
+
+Returns a bundle of log entry data.
+
+**Parameters:**
+- `entryPath`: Entry bundle index encoded as path segments, same format as `tilePath`
+
+**Returns:** `application/octet-stream` — raw entry bundle bytes
+
+**Cache:** `public, max-age=31536000, immutable`
+
+**Example:**
+```bash
+curl http://localhost:8080/logs/did:key:z6Mk.../tile/entries/x000/000
+```
+
+#### Configuration
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `IPFS_GATEWAY_URL` | IPFS gateway used to proxy tile data | `https://w3s.link` |
 
 ## Delegation Model
 
