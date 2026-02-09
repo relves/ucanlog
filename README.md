@@ -13,7 +13,7 @@ Functional POC/RFC. Work in progress. Use at your own risk.
 
 ## Motivation 
 
-This library, when combined with supporting services (e.g., witnesses), forms the bassis for "Proof-as-a-Service". It enables the creation of user owned append-only logs that can be used as verifiable evidence for use cases such as chains of custody, provenance and authorship proofs, credential issuance, and key agreement protocols. Each record can be a public commitment to either pubicly accessible OR private data (depending on your usecase and privacy model).
+The goal of this library is to form the foundation for "Proof-as-a-Service". It enables the creation of user owned append-only logs that can be used as verifiable evidence for use cases such as chains of custody, provenance and authorship proofs, credential issuance, and key agreement protocols. Each record can be a public commitment to either pubic OR private data via hashing (depending on your usecase and privacy model).
 
 ## Distinctive Features
 
