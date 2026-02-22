@@ -66,7 +66,7 @@ require (
 	github.com/ncruces/go-strftime v1.0.0 // indirect
 	github.com/onsi/ginkgo/v2 v2.27.5 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
-	github.com/pion/dtls/v3 v3.0.7 // indirect
+	github.com/pion/dtls/v3 v3.0.11 // indirect
 	github.com/pion/ice/v4 v4.0.10 // indirect
 	github.com/pion/interceptor v0.1.43 // indirect
 	github.com/pion/logging v0.2.4 // indirect
