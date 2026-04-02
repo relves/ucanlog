@@ -115,4 +115,4 @@ require (
 // stallWarnReader in v0.6.0's putBlob wraps the body reader, losing Content-Length
 // and causing 403 on presigned URL uploads. Fork removes it.
 // TODO: Remove once upstream guppy fixes stallWarnReader to preserve Content-Length.
-replace github.com/storacha/guppy => github.com/relves/guppy v0.0.0-20260326215814-773f35b29019
+replace github.com/storacha/guppy => github.com/relves/guppy v0.6.0-patch1

@@ -460,8 +460,8 @@ github.com/quic-go/quic-go v0.50.1 h1:unsgjFIUqW8a2oopkY7YNONpV1gYND6Nt9hnt1PN94
 github.com/quic-go/quic-go v0.50.1/go.mod h1:Vim6OmUvlYdwBhXP9ZVrtGmCMWa3wEqhq3NgYrI8b4E=
 github.com/quic-go/webtransport-go v0.8.1-0.20241018022711-4ac2c9250e66 h1:4WFk6u3sOT6pLa1kQ50ZVdm8BQFgJNA117cepZxtLIg=
 github.com/quic-go/webtransport-go v0.8.1-0.20241018022711-4ac2c9250e66/go.mod h1:Vp72IJajgeOL6ddqrAhmp7IM9zbTcgkQxD/YdxrVwMw=
-github.com/relves/guppy v0.0.0-20260326215814-773f35b29019 h1:dZRtYq3nNWoW6+0T6OD5FuQYEOCIJHEev9jq70uYceU=
-github.com/relves/guppy v0.0.0-20260326215814-773f35b29019/go.mod h1:n5aeC6UKuTRVhxE6V90jhsbv8XYzNdeTfA8Gq2bDqTk=
+github.com/relves/guppy v0.6.0-patch1 h1:Ub2IpBBMpqF05onSOIPZXdCoie7jfzZwCEwLo8vOrrY=
+github.com/relves/guppy v0.6.0-patch1/go.mod h1:n5aeC6UKuTRVhxE6V90jhsbv8XYzNdeTfA8Gq2bDqTk=
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec/go.mod h1:qqbHyh8v60DhA7CoWK5oRCqLrMHRGoxYCSS9EjAz6Eo=
 github.com/rogpeppe/fastuuid v1.2.0/go.mod h1:jVj6XXZzXRy/MSR5jhDC/2q6DgLz+nrA6LYCDYWNEvQ=
