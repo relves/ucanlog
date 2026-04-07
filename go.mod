@@ -4,13 +4,13 @@ go 1.25.5
 
 require (
 	github.com/ipfs/boxo v0.30.0
-	github.com/ipfs/go-cid v0.5.0
+	github.com/ipfs/go-cid v0.6.0
 	github.com/ipfs/go-datastore v0.9.0
 	github.com/ipfs/go-ipfs-blockstore v1.3.1
 	github.com/ipfs/go-ipld-format v0.6.1
 	github.com/ipld/go-car v0.6.2
-	github.com/ipld/go-ipld-prime v0.21.1-0.20240917223228-6148356a4c2e
-	github.com/multiformats/go-multicodec v0.9.2
+	github.com/ipld/go-ipld-prime v0.22.0
+	github.com/multiformats/go-multicodec v0.10.0
 	github.com/multiformats/go-multihash v0.2.3
 	github.com/storacha/go-libstoracha v0.7.5
 	github.com/storacha/go-ucanto v0.8.2
